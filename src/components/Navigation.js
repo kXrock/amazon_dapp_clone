@@ -19,6 +19,7 @@ const Navigation = ({ account, setAccount }) => {
                 <li><a href="#Electronics & Gadgets">Electronics & Gadgets</a></li>
                 <li><a href="#Toys & Gaming">Toys & Gaming</a></li>
             </ul>
+            
         </nav>
     );
 }

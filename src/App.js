@@ -20,12 +20,6 @@ const loadBlockchaindata =async()=>{
   const account= ethers.utils.getAddress(accounts[0]);
   setAccount(account);
 }
-
-/*useEffect(()=>{
-  loadBlockchaindata()
-},[])*/
-
-
   return (
     <div>
       <Navigation account={account} setAccount={setAccount}></Navigation>
