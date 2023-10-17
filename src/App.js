@@ -13,11 +13,12 @@ import Dappazon from './abis/Dappazon.json'
 import config from './config.json'
 
 function App() {
+  const [account,setAccount]= useState(null);
 
 const loadBlockchaindata =async()=>{
   const accounts= await window.ethereum.request({method:"eth_requestAccounts"});
   const account= ethers.utils.getAddress(accounts[0]);
-  console.log(account);
+  setAccount(account);
 }
 
 /*useEffect(()=>{
@@ -27,10 +28,7 @@ const loadBlockchaindata =async()=>{
 
   return (
     <div>
-
-      <h2>Welcome to Dappazon</h2>
-      <button onClick={loadBlockchaindata}>connect wallet</button>
-
+      <Navigation account={account} setAccount={setAccount}></Navigation>
     </div>
   );
 }
